@@ -14,6 +14,7 @@ public class EventController {
     @Autowired
     private EventService eventService;
 
+
     @GetMapping
     public List<Event> getAllEvents() {
         return eventService.getAllEvents();
@@ -38,4 +39,5 @@ public class EventController {
     public void deleteEvent(@PathVariable String id) {
         eventService.deleteEvent(id);
     }
+
 }
