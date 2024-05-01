@@ -1,23 +1,23 @@
 .results-container {
-    background-image: url('/paper.jpg');
-    background-size: 50%;
-    min-height: 100%;
-    overflow: hidden;
-    position: relative;
+  background-image: url('/paper.jpg');
+  background-size: 50%;
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
 
-    &::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      opacity: 0.65;
-      background-color: #1e1613;
-    }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.65;
+    background-color: #1e1613;
+  }
 }
 
 .results {
-    position: relative;
-    margin: 30px;
-    gap: 36px;
-    flex-wrap: wrap;
+  position: relative;
+  margin: 30px;
+  gap: 36px;
+  flex-wrap: wrap;
 }
