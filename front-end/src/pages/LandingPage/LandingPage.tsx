@@ -16,6 +16,7 @@ export const LandingPage: React.FC = () => {
         </div>
         <form className="right-box flex-center flex-auto" onSubmit={(evt) => handleSubmit(evt.currentTarget, { method: "get", action: "/search" })}>
           <div className="search-box flex-row">
+              {/* It's customary to name the search input text as "q" for query. */}
               <input
                 className="search-input"
                 name="q"
