@@ -1,4 +1,6 @@
+
 package com.localpulse.localpulse;
+
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
