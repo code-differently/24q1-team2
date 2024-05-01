@@ -1,4 +1,4 @@
-package com.example.eventapp.model;
+package java.com.localpulse.localpulse;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
