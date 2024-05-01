@@ -1,9 +1,18 @@
+
+
+h2 {
+  position: relative;
+  color: white;
+  align-self: flex-start;
+}
+
 .results-container {
   background-image: url('/paper.jpg');
   background-size: 50%;
   min-height: 100%;
   overflow: hidden;
   position: relative;
+  padding: 40px;
 
   &::before {
     content: '';
@@ -12,12 +21,13 @@
     height: 100%;
     opacity: 0.65;
     background-color: #1e1613;
+    top: 0;
+    left: 0;
   }
 }
 
 .results {
   position: relative;
-  margin: 30px;
   gap: 36px;
   flex-wrap: wrap;
 }
