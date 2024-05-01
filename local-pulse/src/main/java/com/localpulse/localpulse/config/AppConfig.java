@@ -1,4 +1,4 @@
-package com.localpulse.localpulse.config
+package com.localpulse.localpulse;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
