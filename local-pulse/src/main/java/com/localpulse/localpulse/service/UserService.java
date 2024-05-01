@@ -1,17 +1,17 @@
 package com.localpulse.localpulse;
 
-import com.example.eventapp.model.Event;
-import com.example.eventapp.repository.EventRepository;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.localpulse.localpulse.repository.EventRepository;
 
 @Service
-public class EventService {
+public class UserService {
 
     @Autowired
-    private EventRepository eventRepository;
+    private UserRepository userRepository;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -19,28 +19,28 @@ public class EventService {
     @Value("${ticketmaster.apikey}")
     private String apiKey;
 
-    public List<Event> getAllEvents() {
-        return eventRepository.findAll();
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
     }
 
-    public Event getEventById(String id) {
-        return eventRepository.findById(id).orElse(null);
+    public User getUserByEmail(String email) {
+        return userRepository.findByEmail(id).orElse(null);
     }
 
-    public Event createEvent(Event event) {
-        return eventRepository.save(event);
+    public User createUser(User user) {
+        return userRepository.save(user);
     }
 
-    public Event updateEvent(String id, Event event) {
-        if (eventRepository.existsById(id)) {
-            event.setId(id);
-            return eventRepository.save(event);
+    public User updateUser(String email, User user) {
+        if (userRepository.existsByEmail(email)) {
+            event.setEmail(email);
+            return userRepository.save(user);
         }
         return null;
     }
 
-    public void deleteEvent(String id) {
-        eventRepository.deleteById(id);
+    public void deleteUser(String email) {
+        userRepository.deleteByEmail(email);
     }
 
     public void fetchDataFromTicketmasterApi() {
@@ -56,3 +56,6 @@ public class EventService {
     }
 
 }
+
+    
+

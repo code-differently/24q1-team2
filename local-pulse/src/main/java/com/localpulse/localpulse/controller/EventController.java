@@ -1,4 +1,4 @@
-package com.example.eventapp.controller;
+package com.localpulse.localpulse;
 
 import com.example.eventapp.model.Event;
 import com.example.eventapp.service.EventService;
