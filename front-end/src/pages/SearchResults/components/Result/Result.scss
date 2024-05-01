@@ -1,0 +1,37 @@
+.result {
+    background-color: white;
+    font-family: 'Baron Regular', sans-serif;
+    width: 248px;
+    height: 290px;
+    border-radius: 34px;
+    padding: 20px;
+
+    img {
+        border-radius: 34px;
+    }
+
+    .info {
+        margin-top: 20px;
+    }
+}
+
+.buttons {
+    justify-content: end;
+
+    .favorite-btn {
+        border: none;
+        background: none;
+        outline: none;
+
+        .star-icon {
+            fill: #cfcaca;
+            cursor: pointer;
+        }
+
+        &:hover {
+            .star-icon {
+                fill: gold;
+            }
+        }
+    }
+}
