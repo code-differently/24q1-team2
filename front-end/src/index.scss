@@ -1,0 +1,48 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  background-color: #737373;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-auto {
+  flex: 1;
+}
+
+@font-face {
+  font-family: 'Cinzel';
+  src: url('fonts/Cinzel-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Safira March';
+  src: url('fonts/Safira March.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Baron Regular';
+  src: url('fonts/BaronNeue-Regular.otf') format('opentype');
+}
