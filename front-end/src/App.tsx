@@ -1,33 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import mapPointIcon from './assets/map-point.svg'
+import personIcon from './assets/person.svg'
 import './App.scss'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <header className="flex-row">
+        <span className="motto flex-auto">Connect, Engage, Thrive : Uniting Communities Through Local Events</span>
+        <div className="icons flex-row">
+          <a
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={mapPointIcon} alt="React Logo" />
+          </a>
+          <a
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={personIcon} alt="React Logo" />
+          </a>
+        </div>
+      </header>
+      <div className="content flex-column">
+        <div className="hero flex-row">
+          <div className="left-box flex-column flex-auto">
+            <div className="title flex-column">
+              <span>Local Pulse</span>
+              <span>Local Pulse</span>
+            </div>
+          </div>
+          <div className="right-box flex-center flex-auto">
+            <div className="search-box flex-row">
+              <input className="search-input" name="search" type="text" placeholder="What are you looking for?" />
+              <button className="search-btn">
+                <svg viewBox="0 0 24 24"><path fill="#666666" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"></path></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="main flex-row">
+          <div className="mission-statement flex-column flex-auto">
+            <h2>Our Mission</h2>
+            <p>Our mission is to connect individuals with their local communities, fostering a sense of belonging, cultural appreciation, and social interaction. Through our platform, users can discover and engage in a diverse array of local events, support community organizations and initiatives, and promote active participation and cultural exchange. By facilitating connections and encouraging community engagement, we aim to strengthen the fabric of neighborhoods, enhance social cohesion, and contribute to the vibrancy and well-being of communities everywhere.</p>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }

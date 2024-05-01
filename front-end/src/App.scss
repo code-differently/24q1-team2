@@ -1,42 +1,118 @@
 #root {
-  max-width: 1280px;
+  background-color: white;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  font-size: 11px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+header {
+  height: 65px;
+  align-items: center;
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+  .motto {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .icons {
+    gap: 28px;
+    margin: 0 20px;
+
+    img {
+      height: 40px;
+    }
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.hero {
+  height: calc(100vh - 65px);
+  max-height: 700px;
+  overflow: hidden;
+
+  .left-box {
+    background-image: url('assets/street.jpg');
+    background-size: cover;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.25;
+      background-color: black;
+    }
+
+    .title {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      font-size: 2rem;
+      font-family: 'Safira March', cursive;
+
+      & > span:first-child {
+        position: relative;
+        top: 40px;
+      }
+    }
+  }
+
+  .title {
+    color: white;
+
+  }
+
+  .right-box {
+    background-image: url('assets/paper.jpg');
+    background-size: cover;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.65;
+      background-color: black
+    }
+
+    .search-box {
+      position: relative;
+      width: 100%;
+      margin: 0 40px;
+
+      .search-input {
+        font-family: serif;
+        font-size: 1.5em;
+        border-radius: 1.65rem;
+        height: 2.8rem;
+        width: 100%;
+        padding: 0 3.5rem 0 1.5rem;
+      }
+
+      .search-btn {
+        background: none;
+        border: none;
+        outline: none;
+        margin-left: -48px;
+        cursor: pointer;
+
+        svg {
+          height: 30px;
+          width: 30px;
+        }
+      }
+    }
   }
 }
 
-.card {
-  padding: 2em;
+.main > div {
+  padding: 20px;
+
 }
 
-.read-the-docs {
-  color: #888;
+.mission-statement {
+  font-family: 'Cinzel', serif;
+  font-size: .9rem;
 }
