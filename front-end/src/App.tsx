@@ -5,6 +5,7 @@ import {
 import './App.scss'
 import { Layout } from "./Layout";
 import { LandingPage } from "./pages/LandingPage";
+import { SearchResults } from "./pages/SearchResults";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <LandingPage />
+      },
+      {
+        path: "/search",
+        element: <SearchResults />
       }
     ]
   },
