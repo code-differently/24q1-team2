@@ -4,8 +4,12 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.localpulse.localpulse.repository.EventRepository;
+import org.springframework.web.client.RestTemplate;
+import com.localpulse.localpulse.EventRepository;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -23,8 +27,8 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public User getUserByEmail(String email) {
-        return userRepository.findByEmail(id).orElse(null);
+    public Optional<User> getUserByEmail(String email) {
+        return userRepository.findByEmail(email);
     }
 
     public User createUser(User user) {
@@ -33,7 +37,7 @@ public class UserService {
 
     public User updateUser(String email, User user) {
         if (userRepository.existsByEmail(email)) {
-            event.setEmail(email);
+            user.setEmail(email);
             return userRepository.save(user);
         }
         return null;
