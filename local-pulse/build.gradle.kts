@@ -8,6 +8,7 @@ group = "com.localpulse"
 version = "0.0.1-SNAPSHOT"
 
 java {
+
 	sourceCompatibility = JavaVersion.VERSION_22
 }
 
@@ -22,10 +23,16 @@ repositories {
 }
 
 dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
+
 	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("javax.persistence:javax.persistence-api:2.2")
+
 	compileOnly("org.projectlombok:lombok")
+	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	annotationProcessor("org.projectlombok:lombok")
+	implementation("javax.persistence:javax.persistence-api:2.2")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

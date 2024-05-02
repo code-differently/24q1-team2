@@ -1,9 +1,14 @@
 package com.localpulse.localpulse;
 
-import com.example.eventapp.model.Event;
-import com.example.eventapp.repository.EventRepository;
+import com.localpulse.localpulse.Event;
+import com.localpulse.localpulse.EventRepository;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Value;
+
 
 import java.util.List;
 
@@ -47,9 +52,9 @@ public class EventService {
         String apiUrl = "https://app.ticketmaster.com/discovery/v2/events.json?apikey=" + apiKey;
         ResponseEntity<String> response = restTemplate.getForEntity(apiUrl, String.class);
         if (response.getStatusCode() == HttpStatus.OK) {
-            // Process the API response and use it to create or update events
+
             String responseBody = response.getBody();
-            // Process the response body as needed
+
         } else {
             throw new RuntimeException("Failed to fetch data from Ticketmaster API");
         }
