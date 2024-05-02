@@ -31,7 +31,7 @@ export const LandingPage: React.FC = () => {
       </div>
       <div className="main flex-row">
         <div className="mission-statement flex-column flex-auto">
-          <h2>Our Mission</h2>
+          <h2 className="mission-title">Our Mission</h2>
           <p>
             Our mission is to connect individuals with their local communities,
             fostering a sense of belonging, cultural appreciation, and social
