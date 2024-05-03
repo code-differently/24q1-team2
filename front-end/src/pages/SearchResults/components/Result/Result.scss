@@ -1,3 +1,7 @@
+.result:hover {
+  transform: scale(1.15);
+}
+
 .result {
   background-color: white;
   font-family: 'Baron Regular', sans-serif;
@@ -5,6 +9,7 @@
   height: 290px;
   border-radius: 34px;
   padding: 20px;
+  transition: transform 0.3s ease;
 
   img {
     border-radius: 34px;

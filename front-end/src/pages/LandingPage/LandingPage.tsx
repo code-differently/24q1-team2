@@ -10,8 +10,8 @@ export const LandingPage: React.FC = () => {
       <div className="hero flex-row">
         <div className="left-box flex-column flex-auto">
           <div className="title flex-column">
-            <span>Local Pulse</span>
-            <span>Local Pulse</span>
+            <span className="pulse">Local Pulse</span>
+            <span className="pulse">Local Pulse</span>
           </div>
         </div>
         <form className="right-box flex-center flex-auto" onSubmit={(evt) => handleSubmit(evt.currentTarget, { method: "get", action: "/search" })}>
